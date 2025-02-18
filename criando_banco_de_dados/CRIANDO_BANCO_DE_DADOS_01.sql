@@ -22,3 +22,35 @@ SHOW DATABASES;
 | sys                |
 +--------------------+
 
+01.4-COMANDO USAR BANCO DE DADOS 
+
+USE NOME_DO_BANCO
+
+02-CRIANDO TABELAS 
+
+USE LIVRARIA;
+
+CREATE TABLE AUTOR(
+IDAUTOR INT NOT NULL AUTO_INCREMENT,
+NOMEAUTOR VARCHAR(50),
+SOBRENOME VARCHAR(50),
+CONSTRAINT PK_AUTOR PRIMARY KEY (IDAUTOR)
+);
+
+02.1-MOSTRAR TABELA
+
+DESC NOME_TABELA
+EXPLAIN NOME_TABELA
+
+DESC AUTOR;
+EXPLAIN AUTOR;
+
++-----------+-------------+------+-----+---------+----------------+
+| Field     | Type        | Null | Key | Default | Extra          |
++-----------+-------------+------+-----+---------+----------------+
+| IDAUTOR   | int         | NO   | PRI | NULL    | auto_increment |
+| NOMEAUTOR | varchar(50) | YES  |     | NULL    |                |
+| SOBRENOME | varchar(50) | YES  |     | NULL    |                |
++-----------+-------------+------+-----+---------+----------------+
+
+
