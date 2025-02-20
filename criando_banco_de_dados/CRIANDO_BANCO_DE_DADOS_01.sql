@@ -54,3 +54,22 @@ EXPLAIN AUTOR;
 +-----------+-------------+------+-----+---------+----------------+
 
 
+03.CRIAND UMA NOVA TABELA - DROP TABELA
+
+CREATE TABLE EDITORA(
+IDEDITORA INT NOT NULL AUTO_INCREMENT,
+NOMEEDITORA VARCHAR(50),
+CONSTRAINT PK_EDITORA PRIMARY KEY (IDEDITORA)
+);
+
+DESC EDITORA;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| IDEDITORA   | int         | NO   | PRI | NULL    | auto_increment |
+| NOMEEDITORA | varchar(50) | YES  |     | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+
+
+03.1-PAGAR TABELA 
+DROP TABLE EDITORA;
