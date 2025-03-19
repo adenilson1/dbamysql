@@ -73,3 +73,30 @@ DESC EDITORA;
 
 03.1-PAGAR TABELA 
 DROP TABLE EDITORA;
+
+
+04.CRIANDO TABELA LIVRO, FK E VERIFICANDO O MODELO DE DADOS (MER)
+
+CREATE TABLE LIVRO(
+IDLIVRO INT NOT NULL AUTO_INCREMENT,
+NOMELIVRO VARCHAR(45) NOT NULL,
+ID_AUTOR INT NOT NULL,
+ID_EDITORA INT NOT NULL,
+CONSTRAINT PK_LIVRO PRIMARY KEY (IDLIVRO),
+CONSTRAINT FK_LIVRO_AUTOR FOREIGN KEY (ID_AUTOR)
+REFERENCES AUTOR (IDAUTOR), 
+CONSTRAINT FK_LIVRO_EDITORA FOREIGN KEY (ID_EDITORA)
+REFERENCES EDITORA (IDEDITORA)
+
+);
+
+DESC LIVRO;
+
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| IDLIVRO    | int         | NO   | PRI | NULL    | auto_increment |
+| NOMELIVRO  | varchar(45) | NO   |     | NULL    |                |
+| ID_AUTOR   | int         | NO   | MUL | NULL    |                |
+| ID_EDITORA | int         | NO   | MUL | NULL    |                |
++------------+-------------+------+-----+---------+----------------+
